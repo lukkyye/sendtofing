@@ -1,0 +1,106 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(/static/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: monospace;
+    z-index: 1;
+    
+}
+.filter{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.div--main{
+    font-family: inherit;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    z-index: 3;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+.div--main:hover{
+    box-shadow: 0px 0px 30px 0 white;
+}
+
+
+.div--main>form{
+    font-family: inherit;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6vh;
+    z-index: 3;
+}
+.div--main>h1{
+    width: 60%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+.input--boxs{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    font-family: inherit;
+    padding: 1vh;
+    width: 30vw;
+    height: 40%;
+    border: 0;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    transition-property: border-bottom;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    z-index: 3;
+}
+
+.input--boxs:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(255, 81, 0);
+}
+
+#submit{
+    width: 10vw;
+    background-color: beige;
+    border-bottom: 0;
+    border-radius: 20px;
+    color: black;
+    transition-property: background-color;
+    transition-property: color;
+    z-index: 3;
+    padding: 1vh 0 1vh 0;
+    align-self: center;
+    justify-self: center;
+}
+#submit:hover{
+    color: beige;
+    background-color: black;
+}
+
+#attach--file{
+    display:inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-bottom: 1vh;
+    border: 0;
+    z-index: 3;
+}
+
+

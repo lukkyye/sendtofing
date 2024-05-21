@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send to Fing</title>
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='css/styles.css') }}"></head>
+<body>
+    <div class="filter"></div>
+    <div class="div--main">
+        <h1>Envia tu archivo a las maquinas de la Fing</h1>
+        <form method="POST" hidden enctype="multipart/form-data">
+            <input class="input--boxs" name="username" type="text" placeholder="Nombre de usuario">
+            <input class="input--boxs" name="password" type="password" placeholder="Contraseña" required>
+            <input class="input--boxs" name="file" id="attach--file" type="file" required >
+            <input class="input--boxs" id="submit" name="submit" type="submit" value="Enviar">
+        </form>
+    </div>
+    <script>
+        let error = '{{ error }}';
+        let ok = '{{ ok }}';
+        if (ok === 'False') {
+            alert('Ocurrió un error: ' + error);
+        } else if (ok === 'True') {
+            alert('Se ha enviado su archivo correctamente. ¡De todos modos es recomendable fijarse! :D');
+        }
+    </script>
+
+</body>
+</html>
